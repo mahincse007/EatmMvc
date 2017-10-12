@@ -1,0 +1,20 @@
+﻿@model Eatm.Models.Bankac
+@{
+    ViewBag.Title = "Withdrawal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Withdrawal</h3>
+
+@using (Html.BeginForm("DoWithdrawal", "Transaction", new{id = Model.Id}))
+{
+    <div class="form-group">
+        @Html.Label("Amount")
+        @Html.TextBox("Amount", null, new { @class = "form-control" })
+    </div>
+
+    @Html.Hidden("type", "test");
+    
+    <button class="btn btn-primary">Withdrawal</button>
+}
+

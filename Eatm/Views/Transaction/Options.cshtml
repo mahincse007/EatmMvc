@@ -1,0 +1,15 @@
+﻿@model Eatm.Models.Bankac
+@{
+    ViewBag.Title = "Options";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Select Option</h3>
+
+<ul>
+    <li> @Html.ActionLink("Balance Check", "BalanceCheck", "Transaction", new{id = Model.Id}, null) </li>
+    <li> @Html.ActionLink("Withdrawal", "Withdrawal", "Transaction", new{id = Model.Id}, null) </li>
+    <li> @Html.ActionLink("Deposit", "Deposit", "Transaction", new{id = Model.Id}, null) </li>
+    <li> @Html.ActionLink("Logout", "Login", "Transaction") </li>
+</ul>
+

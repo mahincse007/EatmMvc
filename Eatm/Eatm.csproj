@@ -191,12 +191,28 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710110436077_Init.cs" />
+    <Compile Include="Migrations\201710110436077_Init.Designer.cs">
+      <DependentUpon>201710110436077_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710110446042_populateData.cs" />
+    <Compile Include="Migrations\201710110446042_populateData.Designer.cs">
+      <DependentUpon>201710110446042_populateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710120451570_TnxNo.cs" />
+    <Compile Include="Migrations\201710120451570_TnxNo.Designer.cs">
+      <DependentUpon>201710120451570_TnxNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Bankac.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TnxCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -257,6 +273,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Transaction\View.cshtml" />
+    <Content Include="Views\Transaction\Login.cshtml" />
+    <Content Include="Views\Transaction\BalanceCheck.cshtml" />
+    <Content Include="Views\Transaction\Options.cshtml" />
+    <Content Include="Views\Transaction\Withdrawal.cshtml" />
+    <Content Include="Views\Transaction\Deposit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,6 +297,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710110436077_Init.resx">
+      <DependentUpon>201710110436077_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710110446042_populateData.resx">
+      <DependentUpon>201710110446042_populateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710120451570_TnxNo.resx">
+      <DependentUpon>201710120451570_TnxNo.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

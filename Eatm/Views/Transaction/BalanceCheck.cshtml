@@ -1,0 +1,9 @@
+﻿@model Eatm.Models.Bankac
+@{
+    ViewBag.Title = "BalanceCheck";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Your Current Balance is @Model.Balance BDT</h3>
+<h4> @Html.ActionLink("Main Menu", "Options", "Transaction", new{id = Model.Id}, null) </h4>
+

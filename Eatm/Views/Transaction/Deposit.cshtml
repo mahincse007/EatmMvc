@@ -1,0 +1,20 @@
+﻿@model Eatm.Models.Bankac
+@{
+    ViewBag.Title = "Deposit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Diposit</h3>
+
+@using (Html.BeginForm("DoDeposit", "Transaction", new { id = Model.Id }))
+{
+    <div class="form-group">
+        @Html.Label("Amount")
+        @Html.TextBox("Amount", null, new { @class = "form-control" })
+    </div>
+
+    @Html.Hidden("tyle", "deposit");
+
+    <button class="btn btn-primary">Deposit</button>
+}
+
